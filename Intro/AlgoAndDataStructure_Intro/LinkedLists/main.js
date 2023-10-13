@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var LinkedLists_1 = require("./LinkedLists");
+var Node_1 = require("./Node");
+var node = new Node_1.Node(null, 50);
+var previous = node.previous = new Node_1.Node(null, 5);
+previous = previous.previous = new Node_1.Node(null, 60);
+previous = previous.previous = new Node_1.Node(null, 150);
+var list = new LinkedLists_1.LinkedList(node);
+list.traverse();
+console.log("60 found: ".concat(list.search(60)));
+console.log("80 found: ".concat(list.search(80)));
+console.log("150 found: ".concat(list.search(150)));
